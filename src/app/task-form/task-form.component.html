@@ -1,0 +1,18 @@
+
+<h3>   Add New Task: </h3> 
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+
+    <label for="name">Task Name</label>
+    <input type="name" class="form-control" required placeholder="What do you need to do?" [(ngModel)]="model.name" [ngModelOptions]="{standalone: true}">
+  </div>
+
+  <div class="form-group">
+      <label for="description">Task Details</label>
+      <textarea class="form-control" maxlength="150"rows="3" required placeholder="Task Details & Notes" [(ngModel)]="model.description" [ngModelOptions]="{standalone: true}"></textarea>
+    </div>
+<div style="justify-content: center"> 
+    <button type="submit" class="btn btn-outline-primary">Submit</button>
+</div> 
+ 
+</form>

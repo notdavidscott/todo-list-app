@@ -1,0 +1,32 @@
+
+
+
+form div {
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 3px;
+    
+}
+form input,
+textarea {
+    border: 2px solid lightgrey;
+}
+
+h3 {
+    text-align: center;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border: 2px solid rgb(236, 83, 83);
+    transition: all 0.35s ease-in-out;
+}
+
+input.ng-valid.ng-touched,
+textarea.ng-valid.ng-touched {
+    border: 2px solid rgb(96, 201, 96);
+    transition: all 0.35s ease-in-out;
+}
