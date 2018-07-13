@@ -1,0 +1,17 @@
+.add-task {
+    width: 500px;
+    margin: 30px;
+    
+}
+
+.tasks-display {
+    background-color: #a3d1e4; 
+    background-image: url(https://images.template.net/wp-content/uploads/2015/08/Crumpled-Free-Paper-Background-for-You.png);
+    background-size: cover;
+    padding: 20px;
+    margin: 10px;
+    font-size: 25px;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.25), 0 7px 10px rgba(0,0,0,0.22);
+    font-family: 'Montserrat', sans-serif;
+    
+}
