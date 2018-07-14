@@ -1,0 +1,38 @@
+<!-- <div class="row">
+
+    <h3 class="col-sm-10">   Tasks: </h3> 
+    <a class="btn btn-outline-success" routerLink="task-form" routerLinkActive="active">Add Task</a>
+    <br>
+    </div>
+    <ul>   
+      <div *ngFor="let task of tasks">     
+    <p>{{task.id + 1}}. {{task.name}}:
+      <button class="btn btn-outline-danger" style="float:right;margin-left: 5px;" (click)="onClickDelete()">Delete</button>
+      <button class="btn btn-outline-secondary" style="float:right;" (click)="onClickView()">View</button>
+    </p>
+    
+    </div> 
+    </ul>
+  
+  old...-->
+  
+    <div>
+        <div class="tasks-display">
+          <div class="row">
+        <h3 class="col-sm-10">   Tasks: </h3> 
+        <a class="btn btn-outline-success" routerLink="task-form" routerLinkActive="active">Add Task</a>
+        </div>
+<br>
+<div class="row">
+        <div class="col-sm-12">
+        <app-task-display *ngFor="let task of tasks" 
+            [task]="task"
+            (taskDeleted)="onTaskDeleted($event)" 
+            (taskViewed)="onTaskViewed($event)">
+           <!-- for child to parent, parenthesis are used to indicate the output. -->
+        </app-task-display>
+        </div>
+      </div>
+      
+    </div>
+  </div>

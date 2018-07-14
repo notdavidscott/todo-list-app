@@ -1,0 +1,26 @@
+<!-- <ul>   
+    <div *ngFor="let task of tasks">     
+  <p>{{task.id + 1}}. {{task.name}}:
+    <button class="btn btn-outline-danger" style="float:right;margin-left: 5px;" (click)="onClickDelete()">Delete</button>
+    <button class="btn btn-outline-secondary" style="float:right;" (click)="onClickView()">View</button>
+  </p>
+  
+  </div> 
+  </ul>
+   -->
+
+  <div>
+      <div class="row">
+        <div class="col-sm-6">
+      <p>{{task.id + 1}}. {{task.name}}:</p>
+</div>
+          <button class="btn btn-outline-secondary" style="margin-left:208px;" (click)="onClickView()">View</button>
+          <button class="btn btn-outline-danger"  style="margin-left:5px;" (click)="onClickDelete()">Delete</button>
+
+         
+    </div> 
+    <br>
+    </div>
+
+
+ 
