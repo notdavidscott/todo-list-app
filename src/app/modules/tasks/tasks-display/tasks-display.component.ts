@@ -1,8 +1,8 @@
-import { Component, OnInit, Input, Output  } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { of } from 'rxjs';
 import { Task } from '../../../models/task';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
+import { TasksService } from "../../../services/tasks.service";
 
 @Component({
   selector: 'app-tasks-display',
@@ -12,7 +12,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class TasksDisplayComponent implements OnInit {
  
   private tasksRoute = 'http://localhost:3000/tasks';
-  public tasks: Task[] = [];
+  public tasks: Task[];
  
 
   constructor(private http: HttpClient) {}  	
@@ -21,7 +21,8 @@ export class TasksDisplayComponent implements OnInit {
 	  this.http.get<Task[]>(this.tasksRoute).subscribe(tasks => { 			
 	  this.tasks = tasks; 			
 	  console.log('Tasks:', this.tasks); 		
-	}); 	
+  }); 	
+  
 } 	
 
 	ngOnInit() { 		
@@ -38,15 +39,7 @@ export class TasksDisplayComponent implements OnInit {
       taskIndex++;
     }
   }
-
-  onTaskViewed(taskId) {
-    for(let task of this.tasks) {
-      if(task.id === taskId){
-        
-        break;
-      }
       
-    }
     
    
   }
@@ -64,4 +57,3 @@ export class TasksDisplayComponent implements OnInit {
   // }
 
  
-}

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { EventEmitter} from '@angular/core'; //watch for this
 import { Task } from '../../../models/task';
-
+import { RouterModule, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-task-display',
@@ -10,7 +10,7 @@ import { Task } from '../../../models/task';
 })
 export class TaskDisplayComponent implements OnInit {
 
-  @Input() task: Task; //not an array since single movie selection 
+  @Input() task: Task; 
   @Output() taskDeleted: EventEmitter<number>= new EventEmitter();
   @Output() taskViewed: EventEmitter<number>= new EventEmitter();
   constructor() { }
@@ -22,11 +22,10 @@ export class TaskDisplayComponent implements OnInit {
   onClickDelete() {
     alert("Deleted" + ' "' + this.task.name + '" from To-Dos.');
     this.taskDeleted.emit(this.task.id);
+ 
   }
 
-  onClickView() {
-    this.taskViewed.emit(this.task.id);
-  }
+ 
 
   
 }

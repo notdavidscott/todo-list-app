@@ -7,9 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { TasksService } from './services/tasks.service';
 import { TaskFormComponent } from './components/task-form/task-form.component';
 
-
 import { AppRoutingModule } from './/app-routing.module';
-
 import { TasksModule } from './modules/tasks/tasks.module';
 
 
@@ -19,6 +17,7 @@ import { TasksModule } from './modules/tasks/tasks.module';
   declarations: [
     AppComponent,
     TaskFormComponent,
+  
    
   ],
   imports: [

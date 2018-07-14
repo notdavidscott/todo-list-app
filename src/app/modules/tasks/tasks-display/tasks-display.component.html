@@ -28,11 +28,12 @@
         <app-task-display *ngFor="let task of tasks" 
             [task]="task"
             (taskDeleted)="onTaskDeleted($event)" 
-            (taskViewed)="onTaskViewed($event)">
+        >
            <!-- for child to parent, parenthesis are used to indicate the output. -->
         </app-task-display>
         </div>
       </div>
       
     </div>
-  </div>
+  </div>  
+ 
