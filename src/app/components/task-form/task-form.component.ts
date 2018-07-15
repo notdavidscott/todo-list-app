@@ -1,5 +1,6 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { Task } from '../../models/task';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-task-form',
@@ -9,26 +10,27 @@ import { Task } from '../../models/task';
 
 export class TaskFormComponent implements OnInit {
   model: Task = new Task();
-  lastId = 0;
   tasks: Task[];
-
+  lastId = 0;
+  
   constructor() { }
 
   ngOnInit() {
+
   }
 
   addTask(task: Task): TaskFormComponent {
+    this.model = new Task;
     if(task.id){
       task.id = ++this.lastId
     }
-    this.tasks.push(task);
     return this;
   }
 
 
-
   onSubmit() {
-   
+    this.addTask(this.model);
     console.log('Submission Successful: ', this.model);
+  
   }
 }

@@ -11,8 +11,6 @@ import { AppRoutingModule } from './/app-routing.module';
 import { TasksModule } from './modules/tasks/tasks.module';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,

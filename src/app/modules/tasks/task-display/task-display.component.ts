@@ -12,7 +12,7 @@ export class TaskDisplayComponent implements OnInit {
 
   @Input() task: Task; 
   @Output() taskDeleted: EventEmitter<number>= new EventEmitter();
-  @Output() taskViewed: EventEmitter<number>= new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {

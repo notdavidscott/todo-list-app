@@ -6,6 +6,7 @@ import { TaskDetailsComponent } from './modules/tasks/task-details/task-details.
 import { RouterModule, Routes } from '@angular/router';
 import { TaskFormComponent } from './components/task-form/task-form.component';
 
+
 const routes: Routes = [
 
   {

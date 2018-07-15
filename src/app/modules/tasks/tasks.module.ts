@@ -5,9 +5,8 @@ import { TasksDisplayComponent } from './tasks-display/tasks-display.component';
 import { HttpClientModule } from '@angular/common/http';  
 import { TaskDisplayComponent } from './task-display/task-display.component';
 import { TaskDetailsComponent } from './task-details/task-details.component';
+
 import { RouterModule } from '@angular/router';
-
-
 
 
 @NgModule({
@@ -20,12 +19,13 @@ import { RouterModule } from '@angular/router';
     TasksDisplayComponent, 
     TaskDisplayComponent, 
     TaskDetailsComponent, 
+
   ], 
   exports: [
     TasksDisplayComponent,
     TaskDisplayComponent,
     TaskDetailsComponent,
-    
+   
   ]
 })
 export class TasksModule { }

@@ -1,12 +1,15 @@
 <div class="tasks-display">
-   Task Detail:
-    <ul>
-      <li>Task: {{task.name}}</li>
-      <li>Description: {{task.description}}</li>
-    </ul>
-
+    <div class="row">
+        <div class="col-sm-12">
+   <h3>Task Detail:</h3>
+    <br>
+      Task: {{task.name}}<br><hr/>
+      Description: {{task.description}}
+   </div>
+  </div>
+   <br>
+   <br>
     <button class="btn" style="background-color: #6ba2d6; border:1px solid rgb(121, 121, 121);color:white;" 
     (click)="goBack()">Back</button>
   
   </div>
-  

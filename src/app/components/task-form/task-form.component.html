@@ -1,7 +1,13 @@
+<div class="tasks-display">
+  <div class="row justify-content-end">
+<h3> Got more to do?</h3> 
 
-<h3>   Add New Task: </h3> 
+<a class= "row btn" style="margin-left:135px;margin-right:20px;background-color: #d66b74; border:1px solid rgb(121, 121, 121);color:white;" routerLink = '/'>Cancel</a>
+</div>
+
+
 <div class="form-container row justify-content-center">
-<form (ngSubmit)="onSubmit()" routerLink="/" routerLinkActive="active">
+<form (ngSubmit)="onSubmit()">
   <div class="form-group">
 
     <label for="name">Task Name</label>
@@ -13,8 +19,9 @@
       <textarea class="form-control" maxlength="150"rows="3" required placeholder="Task Details & Notes" [(ngModel)]="model.description" [ngModelOptions]="{standalone: true}"></textarea>
     </div>
 <div style="justify-content: center"> 
-    <button type="submit" class="btn btn-outline-primary">Submit</button>
+    <button type="submit" class="btn" style="background-color:  #6ba2d6; border:1px solid rgb(121, 121, 121);color:white;" >Submit</button>
 </div> 
  
 </form>
+</div>
 </div>

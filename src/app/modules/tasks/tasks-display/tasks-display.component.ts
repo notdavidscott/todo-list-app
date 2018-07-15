@@ -1,8 +1,11 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { of } from 'rxjs';
 import { Task } from '../../../models/task';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { TasksService } from "../../../services/tasks.service";
+import { RouterModule, Routes } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-tasks-display',
@@ -20,7 +23,7 @@ export class TasksDisplayComponent implements OnInit {
 	getTasks() { 		
 	  this.http.get<Task[]>(this.tasksRoute).subscribe(tasks => { 			
 	  this.tasks = tasks; 			
-	  console.log('Tasks:', this.tasks); 		
+	  //console.log('Tasks:', this.tasks); 		
   }); 	
   
 } 	
@@ -38,22 +41,8 @@ export class TasksDisplayComponent implements OnInit {
       }
       taskIndex++;
     }
-  }
-      
-    
+  }  
    
   }
-
-  //old old old
-  // dataService: TasksService;
-
-  
-  // constructor(private tasksService: TasksService) {
-  //    this.dataService = this.tasksService;
-  //   }
-
-  // ngOnInit() {
-  //   this.dataService.getTasks().subscribe(tasks => this.tasks = tasks);
-  // }
 
  

@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Task } from '../../../models/task';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Location } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
 
+import { Task } from '../../../models/task';
+import { TasksService } from '../../../services/tasks.service';
 
 @Component({
   selector: 'app-task-details',
@@ -12,28 +12,28 @@ import { RouterModule, Routes } from '@angular/router';
   styleUrls: ['./task-details.component.css']
 })
 export class TaskDetailsComponent implements OnInit {
-  task: Task;
-  private taskRoute = 'http://localhost:3000/tasks';
- 
+
+  public task: Task;
 
   constructor(
     private http: HttpClient,
+    private tasksService: TasksService,
     private route: ActivatedRoute,
     private location: Location
-  ){
+  ){}
     
-  }
-
   ngOnInit() {
     this.getTask();
   }
-//this needs to change 
   getTask() {
-    this.http.get<Task>(this.taskRoute).subscribe(tasks => { 			
-      this.task = tasks; 			
-      console.log('Tasks:', this.task); 		
-    });
-  }
+    const id = +this.route.snapshot.paramMap.get('id'); 
+    console.log('id: ' +  id);
+
+    this.tasksService.getTask(id).subscribe(task => (this.task = task));
+    };
+   	
+     	
+  
   goBack() {
     this.location.back();
   }
