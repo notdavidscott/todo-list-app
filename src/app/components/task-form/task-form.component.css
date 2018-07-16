@@ -23,6 +23,7 @@ form div {
 
 form input,
 textarea {
+    width: 225px;
     border: 2px solid rgb(161, 161, 161);
     
 }
